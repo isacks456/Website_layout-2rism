@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1360px;
+	margin: 0 auto;
+	padding-top: 32px;
+	display: flex;
+	flex-direction: column;
+	gap: 300px;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+}
+
+
+.header {
+
+	background-image: url('/materials/section/bg-image.png');
+	background-size: cover;
+	height: 100vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 15px;
+
+	
+
+	.header1 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.headerLogo {
+			align-items: center;
+		}
+
+		.spanHeader {
+			 > span {
+				display: flex;
+				gap: 48px;
+				justify-content: center;
+				align-items: center;
+					.hrefHeader {
+						text-decoration: none;
+						color: #ffffff9b;
+						font-size: 14px;
+						line-height: 20px;
+						font-weight: 400;
+						transition: color .3s ease-in-out;
+						&:hover {
+							color: #FFFFFF;
+						}
+					}
+			 }
+		}
+
+		.avatarHeader {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 8px;
+
+			.avatarHeader1 {
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+				color: #FFFFFF;
+
+				.activeHeader {
+					color: #ffffff9b;
+					font-size: 14px;
+					line-height: 20px;
+					font-weight: 400;
+					text-align: right;
+				}
+
+				.activeHeader1 {
+					color: #FFFFFF;
+					font-size: 14px;
+					line-height: 20px;
+					font-weight: 500;
+				}
+
+			}
+
+		}
+
+	}
+}
+
+.mainSection {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.sectionBlock {
+		display: flex;
+		flex-direction: column;
+		gap: 62px;
+
+		.sctBlock1 {
+			color: #FFFFFF;
+			font-size: 48px;
+			font-weight: 600;
+			line-height: 62px;
+			text-align: center;
+		}
+
+		.sctBlock12 {
+			display: inline-block;
+			justify-content: center;
+			text-align: center;
+
+			.sctBlock2 {
+				color: #FFFFFF;
+				font-size: 18px;
+				line-height: 18px;
+				font-weight: 500;
+				text-decoration: none;
+				border: 1px solid #7B61FF;
+				padding: 24px;
+				border-radius: 8px;
+				background-color: #7B61FF;
+				transition: opacity .3s ease-in-out;
+				&:hover {
+					opacity: .8;
+				}
+			}
+
+		}
+
+	}
+
+}
