@@ -13,6 +13,12 @@
 	display: flex;
 	flex-direction: column;
 	gap: 300px;
+	@media (max-width:1000px) {
+		gap: 250px;
+	}
+	@media (max-width:500px) {
+		gap: 200px;
+	}
 }
 
 body {
@@ -40,6 +46,19 @@ body {
 			align-items: center;
 		}
 
+		.mainHr {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			gap: 15px;
+			top: 100px;
+			right: 0;
+			padding: 20px 5px;
+			position: absolute;
+		}
+
 		.spanHeader {
 			 > span {
 				display: flex;
@@ -53,11 +72,78 @@ body {
 						line-height: 20px;
 						font-weight: 400;
 						transition: color .3s ease-in-out;
+						@media (max-width:1100px) {
+							font-size: 11px;
+						}
+						@media (max-width:930px) {
+							font-size: 9px;
+						}
+						@media (max-width:890px) {
+							display: none;
+						}
 						&:hover {
 							color: #FFFFFF;
 						}
 					}
 			 }
+
+			 .spanHeader1 {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width: 30px;
+				gap: 10px;
+				cursor: pointer;
+		
+				.bar {
+						width: 100%;
+						height: 1px;
+						background-color: #FFFFFF;
+						border-radius: 4px;
+						transition: all 0.3s ease-in-out;
+						@media (min-width: 891px) {
+							display: none;
+						}
+				}
+		
+				&.active {
+						.bar:nth-child(1) {
+								transform: translateY(8px) rotate(45deg);
+						}
+						.bar:nth-child(2) {
+								opacity: 0;
+						}
+						.bar:nth-child(3) {
+								transform: translateY(-14px) rotate(-45deg);
+						}
+				}
+		}
+
+		.spanHeader2 {
+			display: flex;
+			flex-direction: column;
+			gap: 4px;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			opacity: 0;
+			visibility: hidden;
+			transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+			&.open {
+				opacity: 1;
+				visibility: visible;
+			}
+			 .hrefHeader1 {
+					text-decoration: none;
+					color: #ffffff9b;
+					font-size: 14px;
+					line-height: 20px;
+					font-weight: 400;
+					transition: color .3s ease-in-out;
+			 }
+		}
+
 		}
 
 		.avatarHeader {
@@ -110,6 +196,21 @@ body {
 			font-weight: 600;
 			line-height: 62px;
 			text-align: center;
+			@media (max-width:910px) {
+				font-size: 40px;
+			}
+			@media (max-width:770px) {
+				font-size: 30px;
+			}
+			@media (max-width:600px) {
+				font-size: 25px;
+			}
+			@media (max-width:490px) {
+				font-size: 20px;
+			}
+			@media (max-width:390px) {
+				font-size: 15px;
+			}
 		}
 
 		.sctBlock12 {
@@ -128,6 +229,9 @@ body {
 				border-radius: 8px;
 				background-color: #7B61FF;
 				transition: opacity .3s ease-in-out;
+				@media (max-width:420px) {
+					padding: 15px;
+				}
 				&:hover {
 					opacity: .8;
 				}
